@@ -18,4 +18,6 @@ public interface UserService {
     public CommonResponse<User> getUserById(Integer id);
 
     public CommonResponse<User> updateUser(User user);
+
+    public CommonResponse deleteUserById(Integer id);
 }

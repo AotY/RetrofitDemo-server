@@ -71,4 +71,15 @@ public class UserServiceImpl implements UserService {
 
         return CommonResponse.getSuccessResponse(userRepository.save(user));
     }
+
+    /**
+     * 删除
+     * @param id
+     * @return
+     */
+    @Override
+    public CommonResponse deleteUserById(Integer id) {
+        userRepository.delete(id);
+        return CommonResponse.getSuccessResponse(null);
+    }
 }

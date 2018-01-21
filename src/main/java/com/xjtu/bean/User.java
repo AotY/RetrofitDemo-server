@@ -23,7 +23,7 @@ public class User {
 
     }
 
-    public User(int id, String name, int age) {
+    public User(Integer id, String name, Integer age) {
         this.id = id;
         this.name = name;
         this.age = age;

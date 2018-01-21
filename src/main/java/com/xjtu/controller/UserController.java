@@ -30,7 +30,7 @@ public class UserController {
         return userService.addUser(user);
     }
 
-    @GetMapping(value = "/user/{id}")
+    @GetMapping(value = "/{id}")
     public CommonResponse<User> getUserById(@PathVariable("id") Integer id) {
         return userService.getUserById(id);
     }
@@ -38,5 +38,10 @@ public class UserController {
     @PutMapping(value = "/update")
     public CommonResponse<User> updateUser(User user) {
         return userService.updateUser(user);
+    }
+
+    @DeleteMapping(value = "/delete/{id}")
+    public CommonResponse deleteUserById(@PathVariable("id") Integer id) {
+        return userService.deleteUserById(id);
     }
 }
